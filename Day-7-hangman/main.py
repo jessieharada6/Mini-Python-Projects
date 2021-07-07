@@ -8,7 +8,7 @@ import hangman_art
 
 print(hangman_art.logo)
 lives = 6
-#random words
+# random words
 chosen_word = random.choice(hangman_words.word_list)
 word_len = len(chosen_word)
 print(chosen_word)
@@ -18,7 +18,7 @@ display = []
 for _ in range(word_len):
     display += "_"
 
-#user guess
+# user guess
 end_of_game = False
 already_guessed = []
 # while True: 
