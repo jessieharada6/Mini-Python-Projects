@@ -1,6 +1,7 @@
 from resource import resources, MENU
 
 resources['money'] = 0
+
 def print_report(resources):
     money = ""
     if 'money' in resources:
@@ -20,16 +21,17 @@ def print_report(resources):
 #             print(f"Sorry. There is not enought coffee")
 #             return False
 #     return True
-    
+
 # print(MENU["latte"]["ingredients"]["milk"])
 # check_resources(MENU, resources, "latte")
 
-def check_resources(menu, resources, input): 
+def check_resources(menu, resources, input):
     for item in menu[input]["ingredients"]:
         if menu[input]["ingredients"][item] > resources[item]:
             print(f"Sorry. There is not enought {item}")
             return False
     return True
+
 
 # for item in MENU["latte"]["ingredients"]:
 #     print(MENU["latte"]["ingredients"][item])
@@ -43,6 +45,7 @@ def process_coins():
     amount = 0.25 * quarters + 0.1 * dimes + 0.05 * nickles + 0.01 * pennies
     return amount
 
+
 # print(process_coins(1, 2, 1, 2))
 
 def check_transaction(menu, resources, input):
@@ -50,7 +53,7 @@ def check_transaction(menu, resources, input):
     price = 0
     if input in menu:
         price = menu[input]['cost']
-    
+
     if price > amount:
         print("Sorry that's not enough money. Money refunded.")
         return False
@@ -75,6 +78,7 @@ def make_coffee(menu, resources, input):
                 resources['milk'] -= menu[input]['ingredients']['milk']
             print(f"Here is your {input} ☕️. Enjoy!")
     return resources
+
 
 # print(resources)
 # print(make_coffee(MENU, resources, "latte", 10, 10, 10, 10))
