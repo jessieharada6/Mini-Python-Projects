@@ -45,7 +45,7 @@ with open("new_file.txt", mode = "w") as file:
 # ------ quiz_files
 #  --------- quiz.txt
 # ------ my_project
-# ---------main.py
-# to get quiz.txt from main.py - relative path
+# ---------list_comprehension.py
+# to get quiz.txt from list_comprehension.py - relative path
 # ../my_file/quiz_files/quiz.txt
 # The .. goes up one folder into all_files then down to my_files/etc...

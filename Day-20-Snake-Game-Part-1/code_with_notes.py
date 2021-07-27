@@ -1,4 +1,4 @@
-# main.py
+# list_comprehension.py
 from turtle import Screen, Turtle
 import time
 from snake import Snake
