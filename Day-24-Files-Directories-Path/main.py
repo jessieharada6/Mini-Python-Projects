@@ -9,6 +9,7 @@
 
 # "with" remembers closes the file, mode by default is "r"
 # /Users/jewang/Desktop/my_file.txt --- absolute file path, the first / shows it is a root directory
+# / represents the root path, e.g. same as MacintoshHD/ for mac or C:/ for windows
 # ../../../my_file.txt --- relative path, go up three levels from the current working directory
 with open("../../../my_file.txt") as file:
     contents = file.read()
@@ -33,6 +34,7 @@ with open("new_file.txt", mode = "w") as file:
 #   then based on the current working directory
 #   1. go downwards (current work directory is above the file we want to get): ./folder/file
 #   2.  if the same hierachical level, can remove ./, call "my_file.txt" just as above
+#        Although you can also write this as "./my_file.txt", the "./" is optional.
 #   3. go upwards (current work directory is below the file we want to get): ../file
 #           two dots: go up
 
@@ -41,11 +43,13 @@ with open("new_file.txt", mode = "w") as file:
 # in python, use /
 
 # all_files
-# --- my_files
-# ------ quiz_files
-#  --------- quiz.txt
+# ------ my_files
+# --------- quiz_files
+#  ------------ quiz.txt
 # ------ my_project
-# ---------list_comprehension.py
-# to get quiz.txt from list_comprehension.py - relative path
+# ---------main.py
+# If you are writing code inside main.py,
+# what is the relative file path to open quiz.txt?
+
 # ../my_file/quiz_files/quiz.txt
-# The .. goes up one folder into all_files then down to my_files/etc...
+# The .. goes up one folder, same level as my_files, then go down
