@@ -47,8 +47,8 @@ with open("new_file.txt", mode = "w") as file:
 # --------- quiz_files
 #  ------------ quiz.txt
 # ------ my_project
-# ---------main.py
-# If you are writing code inside main.py,
+# ---------job_application_bot.py
+# If you are writing code inside job_application_bot.py,
 # what is the relative file path to open quiz.txt?
 
 # ../my_file/quiz_files/quiz.txt
