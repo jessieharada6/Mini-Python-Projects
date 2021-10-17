@@ -1,0 +1,9 @@
+
+# -------------------------------------------------------------
+#rm -rf  "folder name"
+# recursively forcing delete the folder name
+# will not be in the recycle bin and can't revert
+# remove anything inside the folder too
+
+#mkdir "new folder name"
+#touch "file name"
