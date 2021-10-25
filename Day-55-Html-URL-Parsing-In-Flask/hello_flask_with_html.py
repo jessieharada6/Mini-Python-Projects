@@ -6,21 +6,49 @@
 
 from flask import Flask
 from markupsafe import escape
+
+# def make_bold(function):
+#     def wrapper():
+#         return "<b>" + function() + "</b>"
+#     return wrapper
+#
+# def make_emphasis(function):
+#     def wrapper():
+#         return "<em>" + function() + "</em>"
+#     return wrapper
+#
+# def make_underlined(function):
+#     def wrapper():
+#         return "<u>" + function() + "</u>"
+#     return wrapper
+
+def make_bold(function):
+    def bold():
+        return f'<b>{function()}<b>'
+    return bold
+
+def make_emphasis(function):
+    def emphasis():
+        return f"<em>{function()}<em>"
+    return emphasis
+
+
 app = Flask(__name__)
 #module name, if it shows "__main__", means it's running the current file
 print(__name__)
-#import random
-#print(random.__name__)
 
-# flask determines which routes to call
-#/ is home address
-# only trigger this function if the url is home address
 #@ is python decorator, lives in the app project, declared in line 8 app = Flask(__name__)
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    # hit enter it will add \ automatically
+    return \
+        '<h1 style="text-align:center">Hello, World!</h1>' \
+        '<p>this is a paragraph<p>' \
+        '<img src = "https://media.giphy.com/media/JhqJUTyFPubQs/giphy.gif" width=200>'
 
 @app.route("/bye")
+@make_bold
+@make_emphasis
 def say_bye():
     return "Goodbye"
 
