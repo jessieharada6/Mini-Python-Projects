@@ -10,8 +10,8 @@ from datetime import datetime
 # https://pixe.la/
 # https://docs.pixe.la/
 
-USERNAME = "jessie16"
-TOKEN = "hfshjkf3783jek"
+USERNAME = ""
+TOKEN = ""
 GRAPH_ID = "graph1"
 
 pixela_endpoint = "https://pixe.la/v1/users"
